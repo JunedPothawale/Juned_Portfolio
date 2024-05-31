@@ -85,7 +85,7 @@
 </head>
 
 <body>
-    <header class="h-auto md:h-auto md:w-full w-screen top-0 left-0 md:bg-transparent transition duration-300"
+    <header class="h-full md:h-auto md:w-full w-full top-0 left-0 md:bg-transparent transition duration-300"
         id="Navcanvas">
         <nav class="w-full flex items-center justify-around py-6 ">
             <div class="logo flex justify-center w-[30%] h-auto">
@@ -96,7 +96,7 @@
             </div>
 
             <ul id="navLink"
-                class="absolute md:static top-[-100%] left-0 w-[100%] md:w-auto flex flex-col items-center bg-[var(--gray-opacity)] md:bg-transparent md:flex-row primary-font md:px-auto">
+                class="absolute h-fit md:static py-2 top-[15%] left-[-100%] w-[100%] md:w-auto flex flex-col items-center bg-[var(--gray-opacity)] md:bg-transparent md:flex-row primary-font md:px-auto transition-[left] duration-1000">
                 <li class="w-full py-4 px-6 md:mx-6 transition">
                     <a class="active" href="/index.html">Home</a>
                 </li>
@@ -111,7 +111,7 @@
                 </li>
             </ul>
 
-            <div class="cta w-[30%] flex justify-center">
+            <div class="cta w-[30%] flex justify-end md:justify-center">
                 <a href="contact.html"
                     class="hidden md:block btn primary-font text-white bg-[var(--gray)] py-2 px-4 rounded-xl hover:bg-[white] transition hover:text-[#000] font-medium"
                     type="button">Let`s
@@ -127,25 +127,25 @@
 
     <section class="h-screen w-full">
         <div class="grid grid-cols-10 md:grid-cols-12 justify-items-center gap-6 p-6">
-            <div class="hidden md:block col-1 w-full"></div>
             <div
-                class="col-span-10 md:col-span-5 border border-black rounded-3xl bg-[var(--gray-opacity)] w-[100%] h-auto">
+                class="col-span-10 md:col-span-5 md:col-start-2 border border-black rounded-3xl bg-[var(--gray-opacity)] w-[100%] h-auto">
                 <div class="flex flex-col md:flex-row p-10 md:p-12 md:gap-x-6">
-                    <div class="profile-img w-[100%] md:w-[50%] flex justify-center">
+                    <div class="profile-img w-[100%] md:w-[50%] flex py-4 md:py-0 justify-center">
                         <img src="assets/me.png"
                             class="h-auto w-[15rem] md:w-[18rem] bg-gradient-to-r from-[#6484EB] to-[#67BCE6] rounded-tl-[30px]  rounded-br-[30px]"
                             alt="" srcset="">
                     </div>
                     <div
-                        class="profile-title w-[100%] md:w-[50%] h-auto flex flex-col justify-center items-center text-center md:text-start md:items-start my-4 md:my-auto">
+                        class="profile-title w-[100%] md:w-[50%] h-auto flex flex-col justify-center items-center text-center md:text-start md:items-start md:my-auto">
                         <h5 class="text-[1.1rem] md:text-[1rem] text-[#899C9F] uppercase">A Software Engineer</h5>
                         <h3
                             class="text-[2.4rem] md:text-[2.5rem] md:tracking-widest md:leading-[50px] font-[500]  text-white ">
                             Juned
                             Pothawale.</h3>
-                        <p class="text-[1rem] md:text-[1.1rem] mt-1 capitalise text-[#899C9F]">I am a Software Developer
-                            based in Pune India.</p>
-                        <a class="nextbtn mt-4  md:mt-auto ms-auto group" href="next.html">
+                        <p class="text-[1rem] md:text-[1.1rem] mt-1 capitalise text-[#899C9F] capitalize">I am software
+                            developer
+                            from Pune India.</p>
+                        <a class="nextbtn mt-4  md:mt-6 md:-mb-2 ms-auto group" href="next.html">
                             <div>
                                 <svg class="stroke-[#899C9F] group-hover:stroke-[#fff]"
                                     xmlns="http://www.w3.org/2000/svg" width="46" height="42" viewBox="0 0 46 42"
@@ -186,9 +186,8 @@
                     <div class="w-full col-span-5 grid grid-cols-6 md:grid-cols-12 flex gap-4">
                         <div
                             class="bg-gradient-to-b from-[#222222] to-[#202020] border border-[#323232] px-8 py-6 rounded-3xl text-[#899C9F] col-span-6  w-full  flex flex-col justify-center items-center">
-                            <div class="signature my-14">
-                                <img class="" height=" 50" width="150" src="./assets/junedSignature.svg" alt=""
-                                    srcset="">
+                            <div class="signature my-8 md:my-4">
+                                <img class="h-14 md:my-9" src="./assets/junedSignature.svg" alt="" srcset="">
                             </div>
                             <div class="title w-full flex">
                                 <div class="sub-title">
@@ -216,8 +215,8 @@
                         </div>
                         <div
                             class="bg-gradient-to-b from-[#222222] to-[#202020] border border-[#323232] px-8 py-6 rounded-3xl text-[#899C9F] col-span-6 w-full  flex flex-col justify-center items-center">
-                            <div class="mywork my-8">
-                                <img class="" height="50" width="200" src="./assets/my-works.png" alt="" srcset="">
+                            <div class="mywork md:my-4">
+                                <img class="h-30" src="./assets/my-works.png" alt="" srcset="">
                             </div>
                             <div class="title w-full flex">
                                 <div class="sub-title">
@@ -246,11 +245,48 @@
                     </div>
                 </div>
             </div>
-
-
-
             <div class="hidden md:block col-1 w-full"></div>
         </div>
+
+        <div class="grid grid-cols-10 md:grid-cols-12 justify-items-center px-7">
+            <div class="col-span-10 md:col-start-2 md:col-span-5 w-full">
+                <div class="grid grid-cols-5 w-full justify-items-center gap-4">
+                    <div class="w-full col-span-5 grid grid-cols-6 md:grid-cols-12 flex gap-4">
+                        <div
+                            class="bg-gradient-to-b from-[#222222] to-[#202020] border border-[#323232] px-8 py-6 rounded-3xl text-[#899C9F] col-span-6  w-full  flex flex-col justify-center items-center">
+                            <div class="signature my-8 md:my-4">
+                                <img class="h-20 w-36 md:my-9" src="./assets/gfonts.png" alt="" srcset="">
+                            </div>
+                            <div class="title w-full flex">
+                                <div class="sub-title">
+                                    <h1 class="font-2xl uppercase">MORE ABOUT ME</h1>
+                                    <h1 class="text-2xl text-white capitalise">Credentials</h1>
+                                </div>
+                                <a class="nextbtn mt-4  md:mt-auto ms-auto group" href="next.html">
+                                    <div>
+                                        <svg class="stroke-[#899C9F] group-hover:stroke-[#fff]"
+                                            xmlns="http://www.w3.org/2000/svg" width="46" height="42"
+                                            viewBox="0 0 46 42" fill="none" style="font-family: Acme;">
+                                            <path
+                                                d="M30.9224 21.2014C25.1291 21.2014 24.618 24.7796 24.618 27.3354C24.618 21.5421 21.5509 21.2014 17.9727 21.2014C24.618 21.2014 24.618 17.2824 24.618 14.8969C24.618 20.3494 27.8554 21.2014 30.9224 21.2014Z"
+                                                style="font-family: Acme;"></path>
+                                            <rect y="21.6981" width="0.999999" height="18"
+                                                transform="rotate(-90 0 21.6981)" style="font-family: Acme;"></rect>
+                                            <path
+                                                d="M9.93715 16.8555C10.9514 13.0701 13.2829 9.77074 16.5123 7.55063C19.7417 5.33052 23.6571 4.33531 27.5547 4.74394C31.4522 5.15258 35.0762 6.93825 37.7749 9.77989C40.4736 12.6215 42.07 16.3327 42.2771 20.2461C42.4842 24.1596 41.2884 28.0185 38.9047 31.1291C36.5211 34.2398 33.1059 36.398 29.2732 37.2157C25.4406 38.0335 21.4419 37.4571 17.9962 35.5903C14.5505 33.7234 11.8839 30.6886 10.4757 27.0314"
+                                                stroke-width="1.5" stroke-linecap="round" style="font-family: Acme;">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </section>
 
 
@@ -261,13 +297,13 @@
             var Navcanvas = document.getElementById('Navcanvas');
             if (toggleBtn.getAttribute('src') != 'assets/menu-burger.svg') {
                 toggleBtn.setAttribute('src', 'assets/menu-burger.svg')
-                navLink.classList.remove('top-[15%]')
-                navLink.classList.add('top-[-100%]')
+                navLink.classList.add('left-[-100%]')
+                navLink.classList.remove('left-[0%]')
                 Navcanvas.classList.remove(['bg-[var(--gray-opacity)]', 'translate-x-100'])
             } else {
                 toggleBtn.setAttribute('src', 'assets/close.svg')
-                navLink.classList.add('top-[15%]')
-                navLink.classList.remove('top-[-100%]')
+                navLink.classList.remove('left-[-100%]')
+                navLink.classList.add('left-[0%]')
                 Navcanvas.classList.add(['bg-[var(--gray-opacity)]', 'translate-x-100'])
             }
 
