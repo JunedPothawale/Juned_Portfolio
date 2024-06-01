@@ -10,12 +10,34 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
     <style>
         :root {
+
             --background-color: #0F0F0F;
             --gray: #323232;
             --primary-font: "Roboto", sans-serif;
             --gray-opacity: rgba(50, 50, 50, 0.5);
+            --background-gradient: linear-gradient(300deg, #131313, #212121);
+            --card-border: 1px solid #131313;
+            --card-box-shadow: 0px 0px 2px 1px #323232;
+            --icon-hover-bg-color: #fff;
+            --icon-hover-color: #000;
+        }
+
+        .card-background {
+            background: var(--background-gradient);
+        }
+
+        .card-border {
+            border: var(--card-border);
+        }
+
+        .card-shadow {
+            box-shadow: var(--card-box-shadow);
         }
 
         body {
@@ -81,57 +103,61 @@
                 transform: translateX(-100%);
             }
         }
+
+        /* .nextbtn:hover>div>img {
+            stroke: #fff !important;
+            fill: #fff;
+        } */
     </style>
 </head>
 
 <body>
-    <header class="h-full md:h-auto md:w-full w-full top-0 left-0 md:bg-transparent transition duration-300"
-        id="Navcanvas">
-        <nav class="w-full flex items-center justify-around py-6 ">
+    <header class="h-full w-full top-0 left-0 transition duration-300" id="Navcanvas">
+        <nav class="w-full flex items-center justify-around py-6">
             <div class="logo flex justify-center w-[30%] h-auto">
                 <a href="/index.html">
-                    <img src="./assets/white-logo-400.200-removebg-preview.png" alt="" srcset="" width="200"
+                    <img src="./assets/images/logo/white-logo-400.200-removebg-preview.png" alt="" srcset="" width="200"
                         height="50">
                 </a>
             </div>
 
             <ul id="navLink"
                 class="absolute h-fit md:static py-2 top-[15%] left-[-100%] w-[100%] md:w-auto flex flex-col items-center bg-[var(--gray-opacity)] md:bg-transparent md:flex-row primary-font md:px-auto transition-[left] duration-1000">
-                <li class="w-full py-4 px-6 md:mx-6 transition">
+                <li class="w-full py-4 px-6 md:px-[2vw]">
                     <a class="active" href="/index.html">Home</a>
                 </li>
-                <li class="w-full py-4 px-6 md:mx-6">
+                <li class="w-full py-4 px-6 md:px-[2vw] ">
                     <a href="/about.html">About</a>
                 </li>
-                <li class="w-full py-4 px-6 md:mx-6">
+                <li class="w-full py-4 px-6 md:px-[2vw] ">
                     <a href="/works.html">Works</a>
                 </li>
-                <li class="w-full py-4 px-6 md:mx-6">
+                <li class="w-full py-4 px-6 md:px-[2vw] ">
                     <a href="/contact.html">Contact</a>
                 </li>
             </ul>
 
             <div class="cta w-[30%] flex justify-end md:justify-center">
                 <a href="contact.html"
-                    class="hidden md:block btn primary-font text-white bg-[var(--gray)] py-2 px-4 rounded-xl hover:bg-[white] transition hover:text-[#000] font-medium"
+                    class="hidden md:block btn primary-font text-white bg-[var(--gray)] py-2 px-8 rounded-xl hover:bg-[white] transition hover:text-[#000] font-medium"
                     type="button">Let`s
                     Talk</a>
                 <button
                     class="hamburger block md:hidden cursor-pointer hover:bg-[var(--gray)] p-3 rounded hover:border transition"
                     onclick="toggleNavbar(this)">
-                    <img id="navToggleBtn" height="25" width="25" src="assets/menu-burger.svg" alt="" srcset="">
+                    <img id="navToggleBtn" height="25" width="25" src="assets/icons/svg/menu-burger.svg" alt=""
+                        srcset="">
                 </button>
             </div>
         </nav>
     </header>
 
-    <section class="h-screen w-full">
-        <div class="grid grid-cols-10 md:grid-cols-12 justify-items-center gap-6 p-6">
-            <div
-                class="col-span-10 md:col-span-5 md:col-start-2 border border-black rounded-3xl bg-[var(--gray-opacity)] w-[100%] h-auto">
+    <section class="h-screen w-[90%] md:w-[80%] flex flex-col gap-6 mx-auto">
+        <div class="grid grid-cols-10 md:grid-cols-6 lg:grid-cols-12 justify-items-center gap-6">
+            <div class="col-span-12 md:col-span-6 card-border rounded-3xl card-background w-[100%] h-auto">
                 <div class="flex flex-col md:flex-row p-10 md:p-12 md:gap-x-6">
                     <div class="profile-img w-[100%] md:w-[50%] flex py-4 md:py-0 justify-center">
-                        <img src="assets/me.png"
+                        <img src="assets/images/me.png"
                             class="h-auto w-[15rem] md:w-[18rem] bg-gradient-to-r from-[#6484EB] to-[#67BCE6] rounded-tl-[30px]  rounded-br-[30px]"
                             alt="" srcset="">
                     </div>
@@ -145,7 +171,7 @@
                         <p class="text-[1rem] md:text-[1.1rem] mt-1 capitalise text-[#899C9F] capitalize">I am software
                             developer
                             from Pune India.</p>
-                        <a class="nextbtn mt-4  md:mt-6 md:-mb-2 ms-auto group" href="next.html">
+                        <a class="nextbtn mt-4  md:mt-10 md:-mb-2 ms-auto  mb-2 group" href="next.html">
                             <div>
                                 <svg class="stroke-[#899C9F] group-hover:stroke-[#fff]"
                                     xmlns="http://www.w3.org/2000/svg" width="46" height="42" viewBox="0 0 46 42"
@@ -164,10 +190,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-span-10 md:col-span-5 w-full">
+            <div class="col-span-12 md:col-span-6  w-full">
                 <div class="grid grid-cols-5 w-full justify-items-center gap-4 ">
                     <div
-                        class="w-full col-span-5 bg-gradient-to-b from-[#222222] to-[#202020] border border-[#323232] rounded-full h-14 px-8 py-2 text-[#899C9F]">
+                        class="w-full col-span-5 card-background card-border rounded-full h-14 px-8 py-2 text-[#899C9F]">
                         <div class="w-[100%] h-full flex items-center overflow-hidden">
                             <div class="scrollerText whitespace-nowrap w-[90%] px-8">
                                 LATEST WORK AND <b class="text-white">FEATURED</b>.
@@ -185,16 +211,16 @@
                     </div>
                     <div class="w-full col-span-5 grid grid-cols-6 md:grid-cols-12 flex gap-4">
                         <div
-                            class="bg-gradient-to-b from-[#222222] to-[#202020] border border-[#323232] px-8 py-6 rounded-3xl text-[#899C9F] col-span-6  w-full  flex flex-col justify-center items-center">
+                            class="card-background  card-border px-8 py-6 rounded-3xl text-[#899C9F] col-span-6  w-full  flex flex-col justify-center items-center">
                             <div class="signature my-8 md:my-4">
-                                <img class="h-14 md:my-9" src="./assets/junedSignature.svg" alt="" srcset="">
+                                <img class="h-14 md:my-9" src="assets/images/svg/junedSignature.svg" alt="" srcset="">
                             </div>
                             <div class="title w-full flex">
                                 <div class="sub-title">
                                     <h1 class="font-2xl uppercase">MORE ABOUT ME</h1>
                                     <h1 class="text-2xl text-white capitalise">Credentials</h1>
                                 </div>
-                                <a class="nextbtn mt-4  md:mt-auto ms-auto group" href="next.html">
+                                <a class="nextbtn mt-4 md:mt-auto ms-auto group" href="next.html">
                                     <div>
                                         <svg class="stroke-[#899C9F] group-hover:stroke-[#fff]"
                                             xmlns="http://www.w3.org/2000/svg" width="46" height="42"
@@ -214,9 +240,9 @@
                             </div>
                         </div>
                         <div
-                            class="bg-gradient-to-b from-[#222222] to-[#202020] border border-[#323232] px-8 py-6 rounded-3xl text-[#899C9F] col-span-6 w-full  flex flex-col justify-center items-center">
+                            class="card-background card-border px-8 py-6 rounded-3xl text-[#899C9F] col-span-6 w-full  flex flex-col justify-center items-center">
                             <div class="mywork md:my-4">
-                                <img class="h-30" src="./assets/my-works.png" alt="" srcset="">
+                                <img class="h-30" src="assets/images/my-works.png" alt="" srcset="">
                             </div>
                             <div class="title w-full flex">
                                 <div class="sub-title">
@@ -245,63 +271,196 @@
                     </div>
                 </div>
             </div>
-            <div class="hidden md:block col-1 w-full"></div>
         </div>
 
-        <div class="grid grid-cols-10 md:grid-cols-12 justify-items-center px-7">
-            <div class="col-span-10 md:col-start-2 md:col-span-5 w-full">
-                <div class="grid grid-cols-5 w-full justify-items-center gap-4">
-                    <div class="w-full col-span-5 grid grid-cols-6 md:grid-cols-12 flex gap-4">
-                        <div
-                            class="bg-gradient-to-b from-[#222222] to-[#202020] border border-[#323232] px-8 py-6 rounded-3xl text-[#899C9F] col-span-6  w-full  flex flex-col justify-center items-center">
-                            <div class="signature my-8 md:my-4">
-                                <img class="h-20 w-36 md:my-9" src="./assets/gfonts.png" alt="" srcset="">
-                            </div>
-                            <div class="title w-full flex">
-                                <div class="sub-title">
-                                    <h1 class="font-2xl uppercase">MORE ABOUT ME</h1>
-                                    <h1 class="text-2xl text-white capitalise">Credentials</h1>
-                                </div>
-                                <a class="nextbtn mt-4  md:mt-auto ms-auto group" href="next.html">
-                                    <div>
-                                        <svg class="stroke-[#899C9F] group-hover:stroke-[#fff]"
-                                            xmlns="http://www.w3.org/2000/svg" width="46" height="42"
-                                            viewBox="0 0 46 42" fill="none" style="font-family: Acme;">
-                                            <path
-                                                d="M30.9224 21.2014C25.1291 21.2014 24.618 24.7796 24.618 27.3354C24.618 21.5421 21.5509 21.2014 17.9727 21.2014C24.618 21.2014 24.618 17.2824 24.618 14.8969C24.618 20.3494 27.8554 21.2014 30.9224 21.2014Z"
-                                                style="font-family: Acme;"></path>
-                                            <rect y="21.6981" width="0.999999" height="18"
-                                                transform="rotate(-90 0 21.6981)" style="font-family: Acme;"></rect>
-                                            <path
-                                                d="M9.93715 16.8555C10.9514 13.0701 13.2829 9.77074 16.5123 7.55063C19.7417 5.33052 23.6571 4.33531 27.5547 4.74394C31.4522 5.15258 35.0762 6.93825 37.7749 9.77989C40.4736 12.6215 42.07 16.3327 42.2771 20.2461C42.4842 24.1596 41.2884 28.0185 38.9047 31.1291C36.5211 34.2398 33.1059 36.398 29.2732 37.2157C25.4406 38.0335 21.4419 37.4571 17.9962 35.5903C14.5505 33.7234 11.8839 30.6886 10.4757 27.0314"
-                                                stroke-width="1.5" stroke-linecap="round" style="font-family: Acme;">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </div>
+        <div
+            class="w-full grid grid-cols-2 md:grid-cols-6 lg:grid-cols-12 justify-items-center text-white gap-y-4 md:gap-6">
+            <div
+                class="p-6 col-span-3 w-full card-border rounded-3xl card-background rounded-3xl text-[#899C9F] flex flex-col justify-center items-center">
+                <div class="signature">
+                    <img class="h-30 w-full md:h-25 md:my-4" src="assets/images/gfonts.png" alt="" srcset="">
+                </div>
+                <div class="title w-full flex px-2">
+                    <div class="sub-title">
+                        <h1 class="font-2xl uppercase">blog</h1>
+                        <h1 class="text-2xl font-medium text-white capitalise">Gfont</h1>
+                    </div>
+                    <a class="nextbtn mt-4 md:mt-auto ms-auto group" href="next.html">
+                        <div>
+                            <svg class="stroke-[#899C9F] group-hover:stroke-[#fff]" xmlns="http://www.w3.org/2000/svg"
+                                width="46" height="42" viewBox="0 0 46 42" fill="none" style="font-family: Acme;">
+                                <path
+                                    d="M30.9224 21.2014C25.1291 21.2014 24.618 24.7796 24.618 27.3354C24.618 21.5421 21.5509 21.2014 17.9727 21.2014C24.618 21.2014 24.618 17.2824 24.618 14.8969C24.618 20.3494 27.8554 21.2014 30.9224 21.2014Z"
+                                    style="font-family: Acme;"></path>
+                                <rect y="21.6981" width="0.999999" height="18" transform="rotate(-90 0 21.6981)"
+                                    style="font-family: Acme;"></rect>
+                                <path
+                                    d="M9.93715 16.8555C10.9514 13.0701 13.2829 9.77074 16.5123 7.55063C19.7417 5.33052 23.6571 4.33531 27.5547 4.74394C31.4522 5.15258 35.0762 6.93825 37.7749 9.77989C40.4736 12.6215 42.07 16.3327 42.2771 20.2461C42.4842 24.1596 41.2884 28.0185 38.9047 31.1291C36.5211 34.2398 33.1059 36.398 29.2732 37.2157C25.4406 38.0335 21.4419 37.4571 17.9962 35.5903C14.5505 33.7234 11.8839 30.6886 10.4757 27.0314"
+                                    stroke-width="1.5" stroke-linecap="round" style="font-family: Acme;">
+                                </path>
+                            </svg>
                         </div>
+                    </a>
+                </div>
+            </div>
+            <div
+                class="p-6 col-span-6 w-full md:order-3 lg:order-none  card-border rounded-3xl card-background rounded-3xl text-[#899C9F] flex flex-col justify-center items-center">
+                <div class="badges">
+                    <ul class="flex m-4 gap-4">
+                        <a class="group" href="#">
+                            <li
+                                class="w-20 h-22 md:w-28 md:h-28 aspect-square flex justify-center items-center rounded-full transition duration-600">
+                                <i
+                                    class="fa fa-linkedin-square text-[3.5rem] text-white font-extralight group-hover:text-[#fff] transition">
+                                </i>
+                            </li>
+                        </a>
+                        <a class="group" href="#" title="deployment">
+                            <li
+                                class="w-20 h-22 md:w-28 md:h-28 aspect-square flex justify-center items-center rounded-full transition duration-600">
+                                <i
+                                    class="fa fa-instagram text-[3.5rem] text-white font-extralight group-hover:text-[#fff] transition">
 
+                                </i>
+                            </li>
+                        </a>
+                        <a class="group" href="#">
+                            <li
+                                class="w-20 h-22 md:w-28 md:h-28 aspect-square flex justify-center items-center rounded-full transition duration-600">
+                                <i
+                                    class="fa fa-github text-[3.5rem] text-white font-extralight group-hover:text-[#fff] transition">
+
+                                </i>
+                            </li>
+                        </a>
+                        <a class="group" href="#">
+                            <li
+                                class="w-20 h-22 md:w-28 md:h-28 aspect-square flex justify-center items-center rounded-full transition duration-600">
+                                <i
+                                    class="fa fa-google text-[3.5rem] text-white font-extralight group-hover:text-[#fff] transition">
+
+                                </i>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title w-full flex px-2">
+                    <div class="sub-title">
+                        <h1 class="font-2xl uppercase">STAY WITH ME</h1>
+                        <h1 class="text-2xl font-medium text-white capitalise">Profiles</h1>
+                    </div>
+                    <a class="nextbtn mt-4 md:mt-auto ms-auto group" href="next.html">
+                        <div>
+                            <svg class="stroke-[#899C9F] group-hover:stroke-[#fff]" xmlns="http://www.w3.org/2000/svg"
+                                width="46" height="42" viewBox="0 0 46 42" fill="none" style="font-family: Acme;">
+                                <path
+                                    d="M30.9224 21.2014C25.1291 21.2014 24.618 24.7796 24.618 27.3354C24.618 21.5421 21.5509 21.2014 17.9727 21.2014C24.618 21.2014 24.618 17.2824 24.618 14.8969C24.618 20.3494 27.8554 21.2014 30.9224 21.2014Z"
+                                    style="font-family: Acme;"></path>
+                                <rect y="21.6981" width="0.999999" height="18" transform="rotate(-90 0 21.6981)"
+                                    style="font-family: Acme;"></rect>
+                                <path
+                                    d="M9.93715 16.8555C10.9514 13.0701 13.2829 9.77074 16.5123 7.55063C19.7417 5.33052 23.6571 4.33531 27.5547 4.74394C31.4522 5.15258 35.0762 6.93825 37.7749 9.77989C40.4736 12.6215 42.07 16.3327 42.2771 20.2461C42.4842 24.1596 41.2884 28.0185 38.9047 31.1291C36.5211 34.2398 33.1059 36.398 29.2732 37.2157C25.4406 38.0335 21.4419 37.4571 17.9962 35.5903C14.5505 33.7234 11.8839 30.6886 10.4757 27.0314"
+                                    stroke-width="1.5" stroke-linecap="round" style="font-family: Acme;">
+                                </path>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div
+                class="p-6 col-span-3 w-full rounded-3xl card-background rounded-3xl text-[#899C9F] flex flex-col justify-center items-center">
+                <div class="badges card-background card-shadow w-full p-6 m-4 flex justify-center rounded-2xl  ">
+                    <ul class=" flex gap-4 ">
+                        <a class="group" href="#" title="Code">
+                            <li
+                                class="w-20 h-22 md:w-15 md:h-15 aspect-square flex justify-center items-center card-border  bg-[var(--gray)] rounded-full transition duration-600 group-hover:bg-[var(--icon-hover-bg-color)]">
+                                <i
+                                    class="fa fa-code text-[2rem]  text-white font-extralight group-hover:text-[var(--icon-hover-color)]  transition">
+                                </i>
+                            </li>
+                        </a>
+                        <a class="group" href="#" title="Upload">
+                            <li
+                                class="w-20 h-22 md:w-15 md:h-15 aspect-square flex justify-center items-center card-border bg-[var(--gray)] rounded-full transition duration-600 group-hover:bg-[var(--icon-hover-bg-color)]">
+                                <i
+                                    class="fa fa-upload text-[2rem] text-white font-extralight group-hover:text-[var(--icon-hover-color)]  transition">
+                                </i>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title w-full flex px-2">
+                    <div class="sub-title">
+                        <h1 class="font-2xl uppercase">SPECIALIZATION</h1>
+                        <h1 class="text-2xl font-medium text-white capitalise">Profiles</h1>
+                    </div>
+                    <a class="nextbtn mt-4 md:mt-auto ms-auto group" href="next.html">
+                        <div>
+                            <svg class="stroke-[#899C9F] group-hover:stroke-[#fff]" xmlns="http://www.w3.org/2000/svg"
+                                width="46" height="42" viewBox="0 0 46 42" fill="none" style="font-family: Acme;">
+                                <path
+                                    d="M30.9224 21.2014C25.1291 21.2014 24.618 24.7796 24.618 27.3354C24.618 21.5421 21.5509 21.2014 17.9727 21.2014C24.618 21.2014 24.618 17.2824 24.618 14.8969C24.618 20.3494 27.8554 21.2014 30.9224 21.2014Z"
+                                    style="font-family: Acme;"></path>
+                                <rect y="21.6981" width="0.999999" height="18" transform="rotate(-90 0 21.6981)"
+                                    style="font-family: Acme;"></rect>
+                                <path
+                                    d="M9.93715 16.8555C10.9514 13.0701 13.2829 9.77074 16.5123 7.55063C19.7417 5.33052 23.6571 4.33531 27.5547 4.74394C31.4522 5.15258 35.0762 6.93825 37.7749 9.77989C40.4736 12.6215 42.07 16.3327 42.2771 20.2461C42.4842 24.1596 41.2884 28.0185 38.9047 31.1291C36.5211 34.2398 33.1059 36.398 29.2732 37.2157C25.4406 38.0335 21.4419 37.4571 17.9962 35.5903C14.5505 33.7234 11.8839 30.6886 10.4757 27.0314"
+                                    stroke-width="1.5" stroke-linecap="round" style="font-family: Acme;">
+                                </path>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="w-full grid grid-cols-2 md:grid-cols-6 lg:grid-cols-12 justify-items-center text-white gap-y-4 md:gap-6">
+            <div
+                class="p-6 gap-4 col-span-6 w-full md:order-3 lg:order-none  card-border rounded-3xl card-background rounded-3xl text-[#899C9F] grid grid-cols-4 md:grid-cols-12">
+                <div class="col-span-4 flex justify-center items-center">
+                    <div
+                        class="col-span-4 card-background rounded-2xl w-[100%] h-[200px] card-border p-6 flex flex-col justify-center items-center">
+                        <h3 class="text-[2rem] py-5 text-white">07</h3>
+                        <h3 class="text-[0.9rem] uppercase text-center">YEARS EXPERIENCE</h3>
                     </div>
                 </div>
+                <div class="col-span-4 flex justify-center items-center w-full">
+                    <div
+                        class="col-span-4 card-background rounded-2xl w-[100%] h-[200px] card-border p-6 flex flex-col justify-center items-center">
+                        <h3 class="text-[2rem] py-5 text-white">+125</h3>
+                        <h3 class="text-[0.9rem] uppercase text-center">CLIENTS WORLDWIDE</h3>
+                    </div>
+                </div>
+                <div class="col-span-4 flex justify-center items-center w-full">
+                    <div
+                        class="col-span-4 card-background rounded-2xl w-[100%] h-[200px] card-border p-6 flex flex-col justify-center items-center">
+                        <h3 class="text-[2rem] py-5 text-white">07</h3>
+                        <h3 class="text-[0.9rem] uppercase text-center w-[70%]">TOTAL PROJECTS</h3>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="p-6 col-span-6 w-full md:order-3 lg:order-none  card-border rounded-3xl card-background rounded-3xl text-[#899C9F] flex flex-col justify-center items-center">
+
             </div>
         </div>
 
     </section>
 
-
     <script>
+
         function toggleNavbar(e) {
             var toggleBtn = document.getElementById('navToggleBtn');
             var navLink = document.getElementById('navLink');
             var Navcanvas = document.getElementById('Navcanvas');
-            if (toggleBtn.getAttribute('src') != 'assets/menu-burger.svg') {
-                toggleBtn.setAttribute('src', 'assets/menu-burger.svg')
+            if (toggleBtn.getAttribute('src') != 'assets/icons/svg/menu-burger.svg') {
+                toggleBtn.setAttribute('src', 'assets/icons/svg/menu-burger.svg')
                 navLink.classList.add('left-[-100%]')
                 navLink.classList.remove('left-[0%]')
                 Navcanvas.classList.remove(['bg-[var(--gray-opacity)]', 'translate-x-100'])
             } else {
-                toggleBtn.setAttribute('src', 'assets/close.svg')
+                toggleBtn.setAttribute('src', 'assets/icons/svg/close.svg')
                 navLink.classList.remove('left-[-100%]')
                 navLink.classList.add('left-[0%]')
                 Navcanvas.classList.add(['bg-[var(--gray-opacity)]', 'translate-x-100'])
