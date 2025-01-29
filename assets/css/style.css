@@ -23,6 +23,7 @@
     box-shadow: var(--card-box-shadow);
 }
 
+
 body {
     background-color: var(--background-color);
 }
@@ -45,12 +46,28 @@ body {
     -moz-transform: translateX(100%);
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
-
     -moz-animation: my-animation 6s linear infinite;
     -webkit-animation: my-animation 6s linear infinite;
     animation: my-animation 6s linear infinite;
 }
-
+.fieldInput{
+    width: 100%;
+    padding: 10px 15px;
+    margin:5px auto;
+    background: linear-gradient(100deg, #282828, #1B1B1B);
+    border-radius: 7px;
+    color: var(--white-opacity);
+    text-transform: capitalize;
+    outline: 1px solid #212121 !important;
+    border-color: none !important;
+}
+.submitInput{
+    padding: .8rem 4.5rem;
+    border-radius: 8px;
+    background: linear-gradient(100deg, #282828, #1B1B1B);
+    outline: 1px solid #212121 !important;
+    
+}
 /* for Firefox */
 @-moz-keyframes my-animation {
     from {
